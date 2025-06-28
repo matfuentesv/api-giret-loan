@@ -1,0 +1,7 @@
+com\giret\apigiretresources\controller\LoanController.class
+com\giret\apigiretresources\model\Loan.class
+com\giret\apigiretresources\service\LoanService.class
+com\giret\apigiretresources\service\LoanServiceImpl.class
+com\giret\apigiretresources\ApiHistoricalResourcesApplication.class
+com\giret\apigiretresources\model\Loan$LoanBuilder.class
+com\giret\apigiretresources\repository\LoanRepository.class
