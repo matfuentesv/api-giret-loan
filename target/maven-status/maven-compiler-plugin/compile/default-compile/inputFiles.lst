@@ -1,6 +1,6 @@
-C:\otros\api-giret-loan\src\main\java\com\giret\apigiretresources\ApiHistoricalResourcesApplication.java
-C:\otros\api-giret-loan\src\main\java\com\giret\apigiretresources\controller\LoanController.java
-C:\otros\api-giret-loan\src\main\java\com\giret\apigiretresources\model\Loan.java
-C:\otros\api-giret-loan\src\main\java\com\giret\apigiretresources\repository\LoanRepository.java
-C:\otros\api-giret-loan\src\main\java\com\giret\apigiretresources\service\LoanService.java
-C:\otros\api-giret-loan\src\main\java\com\giret\apigiretresources\service\LoanServiceImpl.java
+C:\otros\api-giret-loan\src\main\java\com\giret\loan\ApiGiretLoanApplication.java
+C:\otros\api-giret-loan\src\main\java\com\giret\loan\controller\LoanController.java
+C:\otros\api-giret-loan\src\main\java\com\giret\loan\model\Loan.java
+C:\otros\api-giret-loan\src\main\java\com\giret\loan\repository\LoanRepository.java
+C:\otros\api-giret-loan\src\main\java\com\giret\loan\service\LoanService.java
+C:\otros\api-giret-loan\src\main\java\com\giret\loan\service\LoanServiceImpl.java
