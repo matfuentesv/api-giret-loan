@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.giret</groupId>
-    <artifactId>api-giret-loan</artifactId>
+    <artifactId>api-giret-prestamo</artifactId>
     <version>1.0.0</version>
-    <name>api-giret-loan</name>
-    <description>api-giret-loan</description>
+    <name>api-giret-prestamo</name>
+    <description>api-giret-prestamo</description>
     <url/>
     <licenses>
         <license/>

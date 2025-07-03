@@ -1,6 +1,6 @@
 package com.giret.loan.service;
 
-import com.giret.loan.model.Loan;
+import com.giret.loan.model.Prestamo;
 import com.giret.loan.repository.LoanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,32 +15,32 @@ public class LoanServiceImpl implements LoanService {
 
 
     @Override
-    public Loan saveLoan(Loan loan) {
-        return loanRepository.save(loan);
+    public Prestamo saveLoan(Prestamo prestamo) {
+        return loanRepository.save(prestamo);
     }
 
     @Override
-    public List<Loan> getAllLoans() {
+    public List<Prestamo> getAllLoans() {
         return loanRepository.findAll();
     }
 
     @Override
-    public List<Loan> getLoansByResourceId(Long resourceId) {
+    public List<Prestamo> getLoansByResourceId(Long resourceId) {
         return loanRepository.findAll().stream()
                 .filter(p -> p.getRecursoId().equals(resourceId))
                 .toList();
     }
 
     @Override
-    public Loan updateLoan(Long id, Loan loan) {
-        Loan existing = loanRepository.findById(id)
+    public Prestamo updateLoan(Long id, Prestamo prestamo) {
+        Prestamo existing = loanRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Prestamo no encontrado"));
 
-        existing.setRecursoId(loan.getRecursoId());
-        existing.setFechaPrestamo(loan.getFechaPrestamo());
-        existing.setFechaDevolucion(loan.getFechaDevolucion());
-        existing.setSolicitante(loan.getSolicitante());
-        existing.setEstado(loan.getEstado());
+        existing.setRecursoId(prestamo.getRecursoId());
+        existing.setFechaPrestamo(prestamo.getFechaPrestamo());
+        existing.setFechaDevolucion(prestamo.getFechaDevolucion());
+        existing.setSolicitante(prestamo.getSolicitante());
+        existing.setEstado(prestamo.getEstado());
 
         return loanRepository.save(existing);
     }
@@ -48,5 +48,10 @@ public class LoanServiceImpl implements LoanService {
     @Override
     public void deleteLoan(Long id) {
         loanRepository.deleteById(id);
+    }
+
+    @Override
+    public Prestamo updateStateById(Long id, String estado) {
+        return loanRepository.updateLoanById(id, estado);
     }
 }

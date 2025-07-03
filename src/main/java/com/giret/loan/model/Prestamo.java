@@ -11,7 +11,7 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-public class Loan {
+public class Prestamo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "prestamo_seq")

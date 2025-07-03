@@ -1,6 +1,6 @@
 package com.giret.loan.controller;
 
-import com.giret.loan.model.Loan;
+import com.giret.loan.model.Prestamo;
 import com.giret.loan.service.LoanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,19 +17,24 @@ public class LoanController {
 
 
     @PostMapping("/saveLoan")
-    public ResponseEntity<Loan> saveLoan(@RequestBody Loan loan) {
-        Loan saved = loanService.saveLoan(loan);
+    public ResponseEntity<Prestamo> saveLoan(@RequestBody Prestamo prestamo) {
+        Prestamo saved = loanService.saveLoan(prestamo);
         return ResponseEntity.ok(saved);
     }
 
     @GetMapping("/findAllLoan")
-    public ResponseEntity<List<Loan>> getAllLoan() {
+    public ResponseEntity<List<Prestamo>> getAllLoan() {
         return ResponseEntity.ok(loanService.getAllLoans());
     }
 
     @GetMapping("/findLoandByResource/{id}")
-    public ResponseEntity<List<Loan>> findLoandByResource(@PathVariable Long id) {
+    public ResponseEntity<List<Prestamo>> findLoandByResource(@PathVariable Long id) {
         return ResponseEntity.ok(loanService.getLoansByResourceId(id));
+    }
+
+    @PutMapping("/updateLoanByState/{state}/{id}")
+    public ResponseEntity<Prestamo> updateLoanByState(@PathVariable ("state")String state,@PathVariable ("id")Long id) {
+        return ResponseEntity.ok(loanService.updateStateById(id,state));
     }
 
 }
