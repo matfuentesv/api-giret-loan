@@ -1,6 +1,6 @@
-C:\otros\api-giret-loan\src\main\java\com\giret\loan\ApiGiretLoanApplication.java
-C:\otros\api-giret-loan\src\main\java\com\giret\loan\controller\LoanController.java
-C:\otros\api-giret-loan\src\main\java\com\giret\loan\model\Loan.java
-C:\otros\api-giret-loan\src\main\java\com\giret\loan\repository\LoanRepository.java
-C:\otros\api-giret-loan\src\main\java\com\giret\loan\service\LoanService.java
-C:\otros\api-giret-loan\src\main\java\com\giret\loan\service\LoanServiceImpl.java
+C:\TALLER APLICADO DE SOFTWARE\apis\api-giret-loan\src\main\java\com\giret\loan\ApiGiretLoanApplication.java
+C:\TALLER APLICADO DE SOFTWARE\apis\api-giret-loan\src\main\java\com\giret\loan\controller\LoanController.java
+C:\TALLER APLICADO DE SOFTWARE\apis\api-giret-loan\src\main\java\com\giret\loan\model\Prestamo.java
+C:\TALLER APLICADO DE SOFTWARE\apis\api-giret-loan\src\main\java\com\giret\loan\repository\LoanRepository.java
+C:\TALLER APLICADO DE SOFTWARE\apis\api-giret-loan\src\main\java\com\giret\loan\service\LoanService.java
+C:\TALLER APLICADO DE SOFTWARE\apis\api-giret-loan\src\main\java\com\giret\loan\service\LoanServiceImpl.java

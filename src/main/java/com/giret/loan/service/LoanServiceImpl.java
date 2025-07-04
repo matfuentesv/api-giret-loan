@@ -4,7 +4,6 @@ import com.giret.loan.model.Prestamo;
 import com.giret.loan.repository.LoanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -52,6 +51,12 @@ public class LoanServiceImpl implements LoanService {
 
     @Override
     public Prestamo updateStateById(Long id, String estado) {
-        return loanRepository.updateLoanById(id, estado);
+        int updated = loanRepository.updateLoanById(id, estado);
+        if (updated == 1) {
+            return loanRepository.findById(id)
+                    .orElseThrow(() -> new RuntimeException("Préstamo no encontrado"));
+        } else {
+            throw new RuntimeException("No se actualizó ningún préstamo");
+        }
     }
 }

@@ -5,7 +5,6 @@ import com.giret.loan.service.LoanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -34,7 +33,8 @@ public class LoanController {
 
     @PutMapping("/updateLoanByState/{state}/{id}")
     public ResponseEntity<Prestamo> updateLoanByState(@PathVariable ("state")String state,@PathVariable ("id")Long id) {
-        return ResponseEntity.ok(loanService.updateStateById(id,state));
+        Prestamo prestamo = loanService.updateStateById(id, state);
+        return ResponseEntity.ok(prestamo);
     }
 
 }

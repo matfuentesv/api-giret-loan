@@ -1,7 +1,7 @@
 com\giret\loan\repository\LoanRepository.class
+com\giret\loan\model\Prestamo.class
+com\giret\loan\model\Prestamo$PrestamoBuilder.class
 com\giret\loan\ApiGiretLoanApplication.class
 com\giret\loan\controller\LoanController.class
 com\giret\loan\service\LoanServiceImpl.class
-com\giret\loan\model\Loan$LoanBuilder.class
-com\giret\loan\model\Loan.class
 com\giret\loan\service\LoanService.class
