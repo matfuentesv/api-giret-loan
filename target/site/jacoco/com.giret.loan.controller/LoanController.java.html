@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LoanController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">api-giret-prestamo</a> &gt; <a href="index.source.html" class="el_package">com.giret.loan.controller</a> &gt; <span class="el_source">LoanController.java</span></div><h1>LoanController.java</h1><pre class="source lang-java linenums">package com.giret.loan.controller;
+
+import com.giret.loan.model.Prestamo;
+import com.giret.loan.service.LoanService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+
+@RestController
+@RequestMapping(&quot;/api&quot;)
+<span class="fc" id="L12">public class LoanController {</span>
+
+    @Autowired
+    LoanService loanService;
+
+
+    @PostMapping(&quot;/saveLoan&quot;)
+    public ResponseEntity&lt;Prestamo&gt; saveLoan(@RequestBody Prestamo prestamo) {
+<span class="fc" id="L20">        Prestamo saved = loanService.saveLoan(prestamo);</span>
+<span class="fc" id="L21">        return ResponseEntity.ok(saved);</span>
+    }
+
+    @GetMapping(&quot;/findAllLoan&quot;)
+    public ResponseEntity&lt;List&lt;Prestamo&gt;&gt; getAllLoan() {
+<span class="fc" id="L26">        return ResponseEntity.ok(loanService.getAllLoans());</span>
+    }
+
+    @GetMapping(&quot;/findLoandByResource/{id}&quot;)
+    public ResponseEntity&lt;List&lt;Prestamo&gt;&gt; findLoandByResource(@PathVariable Long id) {
+<span class="fc" id="L31">        return ResponseEntity.ok(loanService.getLoansByResourceId(id));</span>
+    }
+
+    @PutMapping(&quot;/updateLoanByState/{state}/{id}&quot;)
+    public ResponseEntity&lt;Prestamo&gt; updateLoanByState(@PathVariable (&quot;state&quot;)String state,@PathVariable (&quot;id&quot;)Long id) {
+<span class="fc" id="L36">        Prestamo prestamo = loanService.updateStateById(id, state);</span>
+<span class="fc" id="L37">        return ResponseEntity.ok(prestamo);</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
